@@ -1,11 +1,22 @@
-# PHP 8.6 - General Availability (GA) 2026-11-19
+# PHP 8.6 Released November 19, 2026
 
-* PHP 8.2 Security Support Until 31 Dec 2026
-* PHP 8.6 reaches End Of Life (EOL) 2030-12-31
-* HP 8.6 active support ends 2028-12-31
-* More details at https://www.php.net/supported-versions.php
+| Support Phase | Expected Timeline |
+| :---          | : --- |
+| PHP 8.6 General Availability (GA) | November 19, 2026 |
+| PHP 8.6 Active Support Ends | December 31, 2028 |
+| PHP 8.6 Security Support Ends (EOL) | December 31, 2030 |
+
+## PHP soon to be EOL
+
+| Support Phase | Expected Timeline |
+| :---          | : --- |
+| PHP 8.2 Security Support Ends (EOL) | 31 Dec 2026 |
+
+More details at https://www.php.net/supported-versions.php
 
 ## Changes
+
+Many of the changes in this release are designed to make PHP more consistent, expressive, and future-ready.
 
 * [What is new](new.md)
 * [What is improved](improved.md)
