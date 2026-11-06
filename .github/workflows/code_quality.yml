@@ -18,13 +18,16 @@ jobs:
 
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
 
-      - name: Setup PHP with tools
+      - name: Setup PHP
         uses: shivammathur/setup-php@v2
         with:
           php-version: ${{ matrix.php-versions }}
-          tools: phpstan
+          coverage: none
+
+      - name: Install dependencies
+        run: composer install --prefer-dist --no-progress
 
       - name: Run PHPStan
-        run: phpstan --level=4 --error-format=github analyse src tests
+        run: vendor/bin/phpstan analyze --error-format=github
