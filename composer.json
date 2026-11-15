@@ -12,7 +12,8 @@
   "license": "MIT",
   "minimum-stability": "dev",
   "require": {
-    "php": ">=8.5"
+    "php": ">=8.6",
+    "ext-io": "*"
   },
   "config": {
     "platform": {
@@ -21,7 +22,7 @@
   },
   "autoload": {
     "psr-4": {
-      "phpbergen\\TalkTopic\\": "src/"
+      "phpbergen\\php86\\": "src/"
     }
   },
   "autoload-dev": {
