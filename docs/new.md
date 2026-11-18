@@ -1,52 +1,25 @@
 # What is new in PHP 8.6
+ 
+## [Partial Function Application: Handling of Optional Parameters](https://wiki.php.net/rfc/partial_function_application_optional_placeholder)
 
-## Stream API
+Parameters generated from ? placeholders shall consistently be non-optional parameters. Parameters that are pulled in by a `...` placeholder shall continue to inherit their “optionality”. [PFA](pfa.md)
 
-* Polling API — This is a low-level API that will help with threaded signal handling, improve FPM performance, and provide timer implementations, which is a key building block for async.
+## [Polling API (Core / I/O)](polling.md)
 
-## clamp() Function (Standard Library)
+I/O polling (also called I/O multiplexing) is a mechanism that allows a program to efficiently monitor multiple I/O resources (like network sockets, pipes, or files) simultaneously and be notified when any of them are ready for reading, writing. [RFC](https://wiki.php.net/rfc/poll_api).
 
-`clamp()` — clamp() is [a new function](https://wiki.php.net/rfc/clamp_v2) that returns a value that is constrained to a specified range. It is useful for limiting values to a certain range, such as when working with numerical data.
+## [clamp() Function (Standard Library)](clamp.md)
 
-```php
-// PHP 8.5 and older.
-if ($x < 0) return 0; if ($x > 100) return 100;
-// If
-($value < $min) ? $min : ( ($value > $max) ? $max : $value )
-```
+Ensures that a given value (numeric or otherwise) falls within a specified range. Otherwise, the nearest boundary value is returned. [RFC clamp()](clamp.md).
 
-```php
-// PHP 8.6 and newer.
-clamp($x, 0, 100);
-```
+## [New \Time\Duration Class](duration.md)
 
-## Duration Class
+The Duration class represents elapsed time as measured by a stopwatch. Its representation is independent of any time and timezone and can represent a range of more than 250 years with nanosecond precision. This makes it well-suited to represent timeouts or benchmark timings in an expressive way.
 
-[This RFC](https://wiki.php.net/rfc/duration_class) is introducing a single class and starts using the Time for PHP’s standard library. `\Time\Duration` is intended as the first part and basic building block of a modernized date and time library for PHP, while already providing value by itself.
+## [Readonly Property Defaults](readonly_property_defaults.md)
 
-`\Time\Duration` a final readonly class that represents a stopwatch-style length of time with nanosecond precision.
+Instance readonly properties, including those in readonly classes, can now declare a default value. This makes it simple to implement get-only interface properties with fixed values, which previously required assigning them in a constructor. The default counts as the property's initialization, so the constructor cannot overwrite it.
 
-### Exception
 
-Throws a `\Time\TimeException`.
-
-```php
-namespace Time;
-
-class TimeException extends \Exception { }
-```
-
-## Polling API (Core / I/O)
-
-Performance-related addition in PHP 8.6. `Io\Poll` provides native (PHP) access to `epoll` (Linux) and `kqueue` (BSD/macOS) — the event notification mechanisms used by example Node.js, Nginx, and Go.
-
-`Io\Poll` 
-
-* [Revolt](https://revolt.run/): Can offer a pure-PHP, zero-dependency event loop.
-* AMPHP: Runs on Revolt.
-* ReactPHP: Can drop multiple backend drivers (stream_select, ext-event, ext-uv) and use Io\Poll as the default.
-* Swoole/OpenSwoole: Doesn't need Io\Poll.
-
-The Symfony team has a polyfill library: `symfony/polyfill-io-poll`
 
 ### [> Index](./index.md)

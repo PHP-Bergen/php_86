@@ -7,18 +7,18 @@ interface MemberInterface {
     public bool $notification { get; }
 }
 
-//Readonly class Member {
-//
-//    public function __construct(
-//        public string $name,
-//        public string $organization,
-//        public bool $notification,
-//    ) {
-//    }
-//}
+Readonly class Member {
+
+    public function __construct(
+        public string $name,
+        public string $organization,
+        public bool $notification,
+    ) {
+    }
+}
 
 // PHP 8.6.
-final Readonly class Member implements MemberInterface {
+final Readonly class Members implements MemberInterface {
 
     public string $organization = 'PHP Bergen';
     public bool $notification = false;
