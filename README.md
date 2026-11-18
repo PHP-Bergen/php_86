@@ -1,6 +1,8 @@
 # PHP 8.6 - PHP Bergen
 ![PHP Bergen - Presentation](https://github.com/PHP-Bergen/presentation_template/actions/workflows/php.yml/badge.svg)
 
+![Photo](docs/img/php8.6.png)
+
 * [PHP 8.6 index](docs/index.md)
 
 ## References

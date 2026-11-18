@@ -38,17 +38,15 @@ class TimeException extends \Exception { }
 
 ## Polling API (Core / I/O)
 
-This is the most significant performance-related addition in PHP 8.6. Io\Poll provides native access to epoll (Linux) and kqueue (BSD/macOS) — the event notification mechanisms used by Node.js, Nginx, and Go.
+Performance-related addition in PHP 8.6. `Io\Poll` provides native (PHP) access to `epoll` (Linux) and `kqueue` (BSD/macOS) — the event notification mechanisms used by example Node.js, Nginx, and Go.
 
 `Io\Poll` 
 
-* ReactPHP: Can drop multiple backend drivers (stream_select, ext-event, ext-uv) and use Io\Poll as the default
-* AMPHP: Can simplify its event loop implementation
-* Revolt: Can offer a pure-PHP, zero-dependency event loop
-* Swoole alternatives: Pure-PHP WebSocket servers become practical without extensions
+* [Revolt](https://revolt.run/): Can offer a pure-PHP, zero-dependency event loop.
+* AMPHP: Runs on Revolt.
+* ReactPHP: Can drop multiple backend drivers (stream_select, ext-event, ext-uv) and use Io\Poll as the default.
+* Swoole/OpenSwoole: Doesn't need Io\Poll.
 
-The Symfony team released `symfony/polyfill-io-poll`
-
-
+The Symfony team has a polyfill library: `symfony/polyfill-io-poll`
 
 ### [> Index](./index.md)
