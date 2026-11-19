@@ -8,6 +8,7 @@
 
 ## References
 
+* [This presentation on Github](https://github.com/PHP-Bergen/php_8)
 * The slides are located in `/docs`.
 * The code is located in `/src`.
 * PHP Bergen git repos can be found at https://github.com/PHP-Bergen

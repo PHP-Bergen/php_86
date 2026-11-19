@@ -18,11 +18,12 @@ More details at https://www.php.net/supported-versions.php
 
 Many of the changes in this release are designed to make PHP more consistent, expressive, and future-ready.
 
-* [Changelog overview](https://php.watch/versions/8.6/changelog)
+* [Changes overview](https://php.watch/versions/8.6/changelog)
+* [PHP 8.6 ChangeLog](https://www.php.net/ChangeLog-8.php#PHP_8_6)
 * [What is new](new.md)
 * [What is improved](improved.md)
 * [What is deprecated](deprecated.md)
-* [Upgrade from PHP 8.5 to PHP 8.6](https://github.com/php/php-src/blob/php-8.6.0RC7/UPGRADING)
+* [Upgrade from PHP 8.5 to PHP 8.6](https://github.com/php/php-src/blob/php-8.6.0/UPGRADING)
 * Upgrade code, [try using Rector](https://getrector.com/)
 * CVE-2026-115560
 * 
