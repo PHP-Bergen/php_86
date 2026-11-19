@@ -20,6 +20,8 @@ The Duration class represents elapsed time as measured by a stopwatch. Its repre
 
 Instance readonly properties, including those in readonly classes, can now declare a default value. This makes it simple to implement get-only interface properties with fixed values, which previously required assigning them in a constructor. The default counts as the property's initialization, so the constructor cannot overwrite it.
 
+## [New SortDirection Enum](sort_direction.md)
 
+The SortDirection enum provides a shared, type-safe way to express sort order with its Ascending and Descending cases. Previously, every library had to define its own way of representing sort direction, resulting in a mix of incompatible integers, strings, booleans, and custom enums. Since SortDirection is built into PHP, libraries can accept it in their public APIs without needing adapter code.
 
 ### [> Index](./index.md)

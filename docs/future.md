@@ -9,7 +9,7 @@
 * RFC: Io/Terminal
 * RFC: Time/<things>.
 * Security: decryp/encrypt improvements.
-
+* RFC: libgd 2.40 re-sync/upgrade.
 
 # PHP 9.0
 

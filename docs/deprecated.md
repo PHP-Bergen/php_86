@@ -1,7 +1,8 @@
 # PHP 8.6 deprecations
 
-* https://wiki.php.net/rfc/deprecations_php_8_6
-* https://php.watch/rfcs
+* RFC: https://wiki.php.net/rfc/deprecations_php_8_6
+* Upgrading https://github.com/php/php-src/blob/php-8.6.0RC7/UPGRADING
+* RFCs: https://php.watch/rfcs
 
 
 ## Returning from a finally block
@@ -42,6 +43,8 @@ class Foo
 
 * Deprecate using `let` as an identifier.
 * Deprecate using `is` as an identifier.
+* Deprecate using `_` as an identifier.
+* Deprecate using `readonly` as an identifier.
 
 ## PHP RFC: Limit maximum number of filter chains
 https://wiki.php.net/rfc/limit-maximum-number-of-filter-chains Limit the number of individual filter components allowed in a single `php://filter` string.
