@@ -13,7 +13,8 @@
   "minimum-stability": "dev",
   "require": {
     "php": ">=8.6",
-    "ext-io": "*"
+    "ext-io": "*",
+    "ext-uri": "*"
   },
   "config": {
     "platform": {

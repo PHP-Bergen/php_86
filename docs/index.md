@@ -22,7 +22,9 @@ Many of the changes in this release are designed to make PHP more consistent, ex
 * [What is new](new.md)
 * [What is improved](improved.md)
 * [What is deprecated](deprecated.md)
-* Upgrade from PHP 8.5 to PHP 8.6: https://github.com/php/php-src/blob/php-8.6.0RC7/UPGRADING
+* [Upgrade from PHP 8.5 to PHP 8.6](https://github.com/php/php-src/blob/php-8.6.0RC7/UPGRADING)
+* Upgrade code, [try using Rector](https://getrector.com/)
+* CVE-2026-115560
 * 
 
 ### [> Home](../README.md)

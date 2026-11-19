@@ -24,4 +24,11 @@ Instance readonly properties, including those in readonly classes, can now decla
 
 The SortDirection enum provides a shared, type-safe way to express sort order with its Ascending and Descending cases. Previously, every library had to define its own way of representing sort direction, resulting in a mix of incompatible integers, strings, booleans, and custom enums. Since SortDirection is built into PHP, libraries can accept it in their public APIs without needing adapter code.
 
+## URL/URI builder
+
+* `Uri\Rfc3986\UriBuilder` class
+* `Uri\WhatWg\UrlBuilder` class
+
+Build URIs from their components, along with new methods for detecting URI and host types and a Uri\WhatWg\url_percent_encode() function.
+
 ### [> Index](./index.md)
