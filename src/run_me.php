@@ -70,10 +70,6 @@ $uri = new Uri\Rfc3986\Uri("foo"); // Uri\Rfc3986\UriType::RelativePathReference
 $uri = new Uri\Rfc3986\Uri("//host.com/foo"); // Uri\Rfc3986\UriType::NetworkPathReference
 $uri->getUriType();
 
-
-
-
-
 // https://url.spec.whatwg.org/#is-special
 $url = new Uri\WhatWg\Url("https://example.com");
 $url = new Uri\WhatWg\Url("custom:example");
@@ -82,3 +78,14 @@ $url->isSpecialScheme(); // Returns a bool.
 // Percent-Encoding Support
 // https://wiki.php.net/rfc/uri_followup#percent-encoding_support
 echo PHP_EOL . rawurlencode("/foo/bar/baz");
+
+// Host Type Detection
+$uri = new Uri\Rfc3986\Uri("https://192.168.0.1/"); // UriHostType::IpV4
+print_r($uri->getHostType());
+$uri = new Uri\Rfc3986\Uri("https://[2001:db8::1]/"); // UriHostType::IpV6
+$uri = new Uri\Rfc3986\Uri("https://[v1.1.2.3]/"); // UriHostType::IpVFuture
+$uri = new Uri\Rfc3986\Uri("https://example.com/"); // UriHostType::RegisteredName
+$uri = new Uri\Rfc3986\Uri("file:///C:/a.txt"); // null
+$uri = new Uri\Rfc3986\Uri("foo:bar/baz"); // null
+$uri = new Uri\Rfc3986\Uri("/foo/bar"); // null
+$uri = new Uri\Rfc3986\Uri("mailto:john.doe@example.com"); // null

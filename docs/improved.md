@@ -1,6 +1,6 @@
 # What is improved in PHP 8.6
 
-PHP 8.6 improve and extend more than simply adding new features. No surprise in a mature language.
+PHP 8.6 improve and extend more than simply adding new functions. No surprise in a mature language.
 
 ## Stream API
 
